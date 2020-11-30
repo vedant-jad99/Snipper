@@ -90,7 +90,7 @@ def clear_activity():
         window.destroy()
 
     window = Toplevel()
-    message = Label(window, width=35, height=7, padx=10, pady=10, text="Are you sure you want to clear?", fg='red')
+    message = Label(window, width=35, height=7, padx=10, pady=10, text="Are you sure you want to clear activity?", fg='red')
     space = Label(window, width=10)
     button = Button(window, width=10, height=2, padx=10, relief=RAISED, borderwidth=3, text="Yes", command=clear)
     button1 = Button(window, width=10, height=2, padx=10, relief=RAISED, borderwidth=3, text="No", command=window.destroy)
