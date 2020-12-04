@@ -1,0 +1,44 @@
+   table,
+   th,
+   td {
+       border: 1px solid white;
+       word-wrap: break-word;
+   }
+   
+   #image {
+       width: 50%;
+       margin-left: auto;
+       margin-right: auto;
+       display: block;
+   }
+   
+   table {
+       width: 100%;
+       border-collapse: collapse;
+   }
+   
+   th {
+       height: 45px;
+       background-color: rgba(53, 241, 6, 0.945);
+       color: white;
+   }
+   
+   tr {
+       height: 30px;
+       text-align: center;
+       transition: height 1s;
+   }
+   
+   tr:nth-child(odd) {
+       background-color: rgba(196, 239, 253, 0.931);
+   }
+   
+   tr:hover {
+       background-color: peachpuff;
+       height: 40px;
+   }
+   
+   h2 {
+       text-align: center;
+       color: magenta;
+   }
