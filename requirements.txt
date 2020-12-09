@@ -1,0 +1,3 @@
+PyAutoGUI==0.9.50
+beautifulsoup4==4.9.3
+Pillow==8.0.1
