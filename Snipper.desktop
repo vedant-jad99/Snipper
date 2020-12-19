@@ -1,7 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Terminal=false
-Name=Snipper
-Exec=bash -c /home/thedarkcoder/Desktop/Projects/snipping_tool/run.sh
-Icon=/home/thedarkcoder/Desktop/Projects/snipping_tool/assets/Snipper.jpg
