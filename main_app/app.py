@@ -119,8 +119,9 @@ class Snipper:
 
         global image
         x, y = event.x, event.y
-        self.__image = self.__image.crop((self.__x, self.__y, x, y))
-        image = ImageTk.PhotoImage(self.__image)
-        self.__image_container.configure(image=image)
-        self.__image_stack.append(self.__image)
+        if abs(x - self.__x) > 10 and abs(y - self.__y) > 10:
+            self.__image = self.__image.crop((self.__x, self.__y, x, y))
+            image = ImageTk.PhotoImage(self.__image)
+            self.__image_container.configure(image=image)
+            self.__image_stack.append(self.__image)
 
