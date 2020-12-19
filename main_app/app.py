@@ -17,8 +17,9 @@ class Snipper:
 
         global icons
 
-        icons = self.__load_images()
-        self.__image_stack = [Image.open('assets/blank.png').resize((400, 250))]
+        path = str(__file__).split("main_app")[0]
+        icons = self.__load_images(path)
+        self.__image_stack = [Image.open(os.path.join(path, 'assets/blank.png')).resize((400, 250))]
         self.__redo_stack = []
 
         self.__save = tk.Button(frame1, pady=5, relief=tk.GROOVE, borderwidth=2, image=icons['save'], command=lambda: t.saveimage(self.__image))
@@ -65,10 +66,10 @@ class Snipper:
         self.__image = image
 
 
-    def __load_images(self):
+    def __load_images(self, path):
         images = {}
 
-        path = os.path.join(os.getcwd(), 'assets')
+        path = os.path.join(path, 'assets')
         for i in os.listdir(path):
             name = i.split('.')
             image = Image.open(os.path.join(path, i))
