@@ -22,12 +22,12 @@ class Snipper:
         self.__image_stack = [Image.open(os.path.join(path, 'assets/blank.png')).resize((400, 250))]
         self.__redo_stack = []
 
-        self.__save = tk.Button(frame1, pady=5, relief=tk.GROOVE, borderwidth=2, image=icons['save'], command=lambda: t.saveimage(self.__image))
-        self.__snip = tk.Button(frame1, pady=5, relief=tk.GROOVE, borderwidth=2, image=icons['snip'], command=lambda: self.__on_snip_click(root))
-        self.__clear = tk.Button(frame1, padx=5, relief=tk.GROOVE, borderwidth=2, image=icons['clear'], command=lambda: t.clearimage(self.set_image, self.__image_container, icons))
-        self.__undo = tk.Button(frame1, padx=5, relief=tk.GROOVE, borderwidth=2, image=icons['undo'], command=lambda: t.undoimage(self.__image_stack, self.__redo_stack, self.__image_container, self.set_image))
-        self.__redo = tk.Button(frame1, padx=5, relief=tk.GROOVE, borderwidth=2, image=icons['redo'], command=lambda: t.redoimage(self.__redo_stack, self.__image_stack, self.__image_container, self.set_image))
-        self.__close = tk.Button(frame1, padx=5, relief=tk.GROOVE, borderwidth=2, image=icons['close'], command=lambda: t.closewindow(root))
+        self.__save = tk.Button(frame1, pady=5, image=icons['save'], command=lambda: t.saveimage(self.__image))
+        self.__snip = tk.Button(frame1, pady=5, image=icons['snip'], command=lambda: self.__on_snip_click(root))
+        self.__clear = tk.Button(frame1, padx=5, image=icons['clear'], command=lambda: t.clearimage(self.set_image, self.__image_container, icons))
+        self.__undo = tk.Button(frame1, padx=5, image=icons['undo'], command=lambda: t.undoimage(self.__image_stack, self.__redo_stack, self.__image_container, self.set_image))
+        self.__redo = tk.Button(frame1, padx=5, image=icons['redo'], command=lambda: t.redoimage(self.__redo_stack, self.__image_stack, self.__image_container, self.set_image))
+        self.__close = tk.Button(frame1, padx=5, image=icons['close'], command=lambda: t.closewindow(root))
         self.__space = tk.Label(frame1, width=7)
         self.__options = tk.Menubutton(frame1, padx=5, relief=tk.GROOVE, borderwidth=2, image=icons['options'])
 
