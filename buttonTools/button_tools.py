@@ -4,10 +4,12 @@ from PIL import ImageTk
 from datetime import datetime as dt
 import json
 from show_report.scripts.insert_table import show
+import os
 
 global label_image
 global json_path
-json_path = "activity_and_logs/activities.json"
+
+json_path = str(__file__).split('buttonTools')[0] + "activity_and_logs/activities.json"
 
 def screenshotimage():
     image = pag.screenshot()
