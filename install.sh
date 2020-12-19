@@ -16,7 +16,7 @@ Icon=/home/thedarkcoder/Desktop/Projects/snipping_tool/assets/Snipper.jpg"
 
 echo "$string$path_exec" > Snipper.desktop
 
-sudo cp Snipper.desktop /usr/share/applications
+sudo mv Snipper.desktop /usr/share/applications/Snipper.desktop
 
 string_run="#!/bin/sh\n\n"
 path="path=$PWD/main.py\n"
