@@ -11,10 +11,10 @@ Version=1.0
 Type=Application
 Terminal=false
 Name=Snipper\n'
-path_exec="Exec=bash -c $PWD/run.sh
-Icon=/home/thedarkcoder/Desktop/Projects/snipping_tool/assets/Snipper.jpg"
+path_exec="Exec=bash -c $PWD/run.sh\n"
+icon_path="Icon=$PWD/assets/Snipper.jpg"
 
-echo "$string$path_exec" > Snipper.desktop
+echo "$string$path_exec$icon_path" > Snipper.desktop
 
 sudo mv Snipper.desktop /usr/share/applications/Snipper.desktop
 
