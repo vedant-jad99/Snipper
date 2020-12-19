@@ -38,7 +38,8 @@ def show():
     html = bs(html, "html.parser")
     m = html.find('tbody')
 
-    with open("activity_and_logs/activities.json") as f:
+    json_path = str(__file__).split('show_report')[0] + "activity_and_logs/activities.json"
+    with open(json_path, "r") as f:
         data = json.load(f)
         f.close()
 
@@ -50,8 +51,9 @@ def show():
             new.append(child)
         m.append(new)
 
-    with open("show_report/report.html", "w") as f:
+    path = str(__file__).split('scripts')[0] + 'report.html'
+    with open(path, "w") as f:
         f.write(str(html))
         f.close()
 
-    open_new_tab("show_report/report.html")
+    open_new_tab(path)
