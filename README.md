@@ -1,4 +1,4 @@
-# Snippper
+# Snipper
 A snipping tool like windows, for linux users. 
 
 #### Debug 1.0.1
