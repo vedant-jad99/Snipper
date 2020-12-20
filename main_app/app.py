@@ -61,6 +61,10 @@ class Snipper:
         options_ttp = CreateToolTip(self.__options, "Options")
         close_ttp = CreateToolTip(self.__close, "Exit")
 
+        root.bind("<Control-Key-s>", self.__on_key)
+
+    def __on_key(self, event):
+        t.saveimage(self.__image)
 
     def set_image(self, image=None):
         self.__image = image
