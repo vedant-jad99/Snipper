@@ -1,9 +1,10 @@
 # Snippper
 A snipping tool like windows, for linux users. 
 
-### Debug 1.0.1
+#### Debug 1.0.1
 - Added `scrot` library installation command to install.sh file.
 - Fixed the single click glitch.
+#### Debug 1.0.2
 - Fixed snip backwards and upwards bug.
 
 ### Version 1.1
