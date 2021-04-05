@@ -25,4 +25,4 @@ next_line='/usr/bin/env python3 "$path"'
 
 echo "$string_run$path$next_line" > run.sh
 chmod +x run.sh
-chomd +x uninstall.sh
+chmod +x uninstall.sh
